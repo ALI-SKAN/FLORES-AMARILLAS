@@ -41,55 +41,14 @@ body {
   margin-bottom: 180px;
   color: yellow;
   position: absolute;
-  top: 20px;
+  top: 20px; 
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); 
   width: 80%;
   font-size: 3vh;
   opacity: 0;
   animation: fadeIn 4s ease-in-out forwards;
   text-align: center;
-}
-
-/* Pantalla inicial con el formulario de meses */
-.intro-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 1000;
-  text-align: center;
-}
-
-.intro-container input {
-  padding: 10px;
-  font-size: 18px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.intro-container button {
-  padding: 10px 20px;
-  margin-top: 15px;
-  font-size: 18px;
-  color: white;
-  background-color: #e75480;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.intro-container button:hover {
-  background-color: #d1426e;
 }
 @keyframes fadeIn {
   from {
@@ -1694,24 +1653,16 @@ h1 {
 }
 
 
-  </style>
+    </style>
   </head>
   <body class="container">
-    <div id="intro" class="intro-container">
-      <h1>¿Cuántos meses cumplimos hoy?</h1>
-      <input type="number" id="months" placeholder="Ejemplo: 6" />
-      <button onclick="startCelebration()">Iniciar</button>
-    </div>
-
-    <div id="flowers-section" style="display:none;">
-      <h1 class="titulo">
-        Feliz 6 meses mi amor ❤️ <br>
-         Gracias por estos maravillosos 6 meses juntos.❤️<br>
-        Te amo con todo mi corazón y quiero que sigamos compartiendo muchos meses y años más. Eres lo mejor que me ha pasado.
-      </h1>
-
-      <div class="night"></div>
-      <div class="flowers">
+    <h1 class="titulo">
+      Feliz 6 meses mi amor ❤️ <br>
+       Gracias por estos maravillosos 6 meses juntos.❤️<br> 
+      Te amo con todo mi corazón y quiero que sigamos compartiendo muchos meses y años más. Eres lo mejor que me ha pasado.</h1>
+  
+    <div class="night"></div>
+    <div class="flowers">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>
@@ -2020,22 +1971,5 @@ h1 {
         </div>
       </div>
     </div>
-    <script>
-      function startCelebration() {
-        const months = document.getElementById('months').value;
-        if (!months || months <= 0) {
-          alert('Por favor, ingresa un número válido de meses.');
-          return;
-        }
-
-        document.getElementById('intro').style.display = 'none';
-        document.getElementById('flowers-section').style.display = 'block';
-
-        document.querySelector('.titulo').innerHTML =
-          `Feliz ${months} meses mi amor ❤️ <br>
-          Gracias por estos maravillosos ${months} meses juntos.❤️<br>
-          Te amo con todo mi corazón y quiero que sigamos compartiendo muchos meses y años más. Eres lo mejor que me ha pasado.`;
-      }
-    </script>
   </body>
 </html>
